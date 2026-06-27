@@ -461,58 +461,127 @@ e
 
     .skills-section {
       padding: 60px 20px;
-      background-color: #788c91;
+      background: linear-gradient(135deg, #788c91 0%, #6b7a80 100%);
       text-align: center;
-
     }
 
     .skills-section .section-title {
       font-size: 2rem;
       margin-bottom: 40px;
-      color: #165454;
+      color: #fff;
+      font-weight: 600;
+      animation: slideDown 0.6s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .skills-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
     }
 
     .skill-item {
-      flex: 1 1 calc(25% - 20px);
-      /* Responsividade */
-      max-width: calc(25% - 20px);
+      flex: 1 1 calc(25% - 25px);
+      max-width: calc(25% - 25px);
       background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 25px;
       text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.6s ease-out backwards;
+      border-top: 4px solid #2c6e6e;
     }
 
+    .skill-item:nth-child(1) { animation-delay: 0.1s; border-top-color: #3498db; }
+    .skill-item:nth-child(2) { animation-delay: 0.2s; border-top-color: #e74c3c; }
+    .skill-item:nth-child(3) { animation-delay: 0.3s; border-top-color: #f39c12; }
+    .skill-item:nth-child(4) { animation-delay: 0.4s; border-top-color: #9b59b6; }
+
     .skill-item:hover {
-      transform: translateY(-9px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
 
     .skill-item i {
-      font-size: 2rem;
-      color: #2c6e6e;
+      font-size: 2.5rem;
       margin-bottom: 15px;
+      transition: color 0.3s ease;
     }
+
+    .skill-item:nth-child(1) i { color: #3498db; }
+    .skill-item:nth-child(2) i { color: #e74c3c; }
+    .skill-item:nth-child(3) i { color: #f39c12; }
+    .skill-item:nth-child(4) i { color: #9b59b6; }
 
     .skill-item h3 {
-      font-size: 1.25rem;
-      margin-bottom: 10px;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
       color: #165454;
+      font-weight: 600;
     }
 
-    .skill-item p {
-      font-size: 0.95rem;
-      color: #666;
-
+    .skill-category {
+      margin-bottom: 12px;
     }
+
+    .skill-name {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 4px;
+      text-align: left;
+      font-weight: 500;
+    }
+
+    .progress-bar-container {
+      background: #ecf0f1;
+      border-radius: 6px;
+      height: 6px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      border-radius: 6px;
+      animation: fillWidth 1s ease-out forwards;
+    }
+
+    @keyframes fillWidth {
+      from {
+        width: 0;
+      }
+      to {
+        width: var(--width, 80%);
+      }
+    }
+
+    .skill-item:nth-child(1) .progress-bar { background: #3498db; }
+    .skill-item:nth-child(2) .progress-bar { background: #e74c3c; }
+    .skill-item:nth-child(3) .progress-bar { background: #f39c12; }
+    .skill-item:nth-child(4) .progress-bar { background: #9b59b6; }
 
     /* Responsividade para telas menores */
 
@@ -724,7 +793,6 @@ e
 
       <div class="card">
         <div class="card-body">
-
           <section id="Habilities" class="skills-section">
             <div class="container">
               <h2 class="section-title">Minhas Habilidades</h2>
@@ -732,27 +800,70 @@ e
               <div class="skills-list">
                 <div class="skill-item">
                   <i class="fas fa-code"></i>
-                  <h3>Desenvolvimento Web</h3>
-                  <p>HTML, CSS, JavaScript, React, Node.js, Vite , Git & GitHub, NPM</p>
+                  <h3>Web Development</h3>
+                  <div class="skill-category">
+                    <div class="skill-name">HTML / CSS</div>
+                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 95%"></div></div>
+                  </div>
+                  <div class="skill-category">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 90%"></div></div>
+                  </div>
+                  <div class="skill-category">
+                    <div class="skill-name">React</div>
+                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 85%"></div></div>
+                  </div>
                 </div>
 
                 <div class="skill-item">
                   <i class="fas fa-paint-brush"></i>
-                  <h3>Design </h3>
-                  <p> UX, LCP, CLS</p>
-
+                  <h3>Design & UX</h3>
+                  <div class="skill-category">
+                    <div class="skill-name">UI/UX Design</div>
+                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 80%"></div></div>
+                  </div>
+                  <div class="skill-category">
+                    <div class="skill-name">Responsive Design</div>
+                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 90%"></div></div>
+                  </div>
+                  <div class="skill-category">
+                    <div class="skill-name">Performance (LCP, CLS)</div>
+                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 75%"></div></div>
+                  </div>
                 </div>
 
                 <div class="skill-item">
                   <i class="fas fa-database"></i>
-                  <h3>Base de Dados </h3>
-                  <p>Mongo Db</p>
+                  <h3>Backend & BD</h3>
+                  <div class="skill-category">
+                    <div class="skill-name">Node.js</div>
+                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 80%"></div></div>
+                  </div>
+                  <div class="skill-category">
+                    <div class="skill-name">MongoDB</div>
+                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 85%"></div></div>
+                  </div>
+                  <div class="skill-category">
+                    <div class="skill-name">Git & GitHub</div>
+                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 88%"></div></div>
+                  </div>
                 </div>
 
                 <div class="skill-item">
                   <i class="fas fa-cogs"></i>
-                  <h3>Outras Habilidades</h3>
-                  <p> Metodologias Ágeis, C#, C++</p>
+                  <h3>Outras Skills</h3>
+                  <div class="skill-category">
+                    <div class="skill-name">Agile Methodology</div>
+                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 80%"></div></div>
+                  </div>
+                  <div class="skill-category">
+                    <div class="skill-name">C# / C++</div>
+                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 70%"></div></div>
+                  </div>
+                  <div class="skill-category">
+                    <div class="skill-name">Vite & NPM</div>
+                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 85%"></div></div>
+                  </div>
                 </div>
               </div>
             </div>
