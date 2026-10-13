@@ -9,599 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-
-    @media screen and (max-width: 728px) {
-
-      h1,
-      h2,
-      h3,
-      h4 {
-        font-size: 30px;
-
-      }
-
-      .carousel-item img {
-        width: auto;
-        /* Ajusta à largura do contêiner */
-        height: 250px;
-        background-color: none;
-      }
-e
-      nav {
-        padding: 10px;
-        /* Reduz o espaçamento interno */
-        text-align: center;
-        /* Centraliza o conteúdo */
-        flex-direction: column;
-        /* Alinha os elementos verticalmente */
-      }
-
-      .navbar-brand {
-        font-size: 14px;
-        /* Reduz o tamanho da marca */
-      }
-
-      .navbar-nav {
-        display: flex;
-        flex: grid;
-        /* Empilha os links verticalmente */
-        align-items: start;
-        /* Alinha para o principio */
-
-      }
-
-      .navbar-nav .nav-link {
-        font-size: 14px;
-        /* Reduz o tamanho dos links */
-        padding: 14px 0;
-        /* Espaçamento entre os links */
-        display: flex;
-
-
-      }
-
-      .navbar-toggler {
-        margin: 10 auto;
-        /* Centraliza o botão do menu */
-      }
-
-      .navbar-toggler i {
-        font-size: 20px;
-        /* Ajusta o tamanho do ícone */
-      }
-
-
-      nav ul li a:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-      }
-
-
-
-      footer {
-        width: 100%;
-      }
-
-      footer element {
-
-        padding: 0px;
-      }
-
-      footer dl {
-
-        font-size: 14px;
-        padding: 0;
-        margin: 0;
-      }
-
-      footer p {
-        font-size: 15px;
-      }
-
-      .acourdion-header {
-        width: 80%;
-        max-width: auto;
-        height: auto;
-
-      }
-
-      .whatsapp-icon,
-      .linkedin-icon {
-
-        display: block;
-        padding-left: 2px;
-        font-size: 10px;
-
-      }
-
-      .linkedin-icon {
-        background-color: #0077b5;
-        padding: 10px;
-        width: 180px;
-        max-width: 1200px;
-        height: 65px;
-
-      }
-
-
-      .whatsapp-icon {
-        background-color: #0077b5;
-        padding: 10px;
-        width: 180px;
-        max-width: 1200px;
-        height: 65px;
-      }
-
-      .github-icon {
-        background-color: #0077b5;
-        padding: 10px;
-        width: 180px;
-        max-width: 1200px;
-        height: 60px;
-
-      }
-
-      .email-icon {
-        background-color: #0077b5;
-        padding: 10px;
-        width: 180px;
-        max-width: 1200px;
-        height: 60px;
-      }
-    }
-
-
-
-
-    * {
-
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-
-    h1#inicio {
-      padding-top: 80px;
-      padding-bottom: 2px;
-    }
-
-
-    .navbar-toggler {
-      border: 1px solid rgb(91, 233, 233);
-      /* Borda azul fina */
-      border-radius: 5px;
-      /* Cantos arredondados */
-      position: relative;
-    }
-
-    /* Quando o botão é clicado ou está ativo */
-    .navbar-toggler:focus,
-    .navbar-toggler:hover {
-      box-shadow: 0 0 8px 4px rgba(91, 233, 233, 1);
-      /* Brilho suave ao redor da borda */
-      outline: none;
-      /* Remove a borda padrão preta */
-    }
-
-    /* Estilo para o ícone dentro do navbar-toggler */
-    .navbar-toggler i {
-      color: rgb(91, 233, 233);
-      font-size: 24px;
-      transition: box-shadow 0.3s ease;
-      /* Transição suave para o brilho */
-      position: relative;
-      z-index: 1;
-      /* Garante que o ícone fique acima do brilho */
-    }
-
-    /* Efeito de brilho nas bordas do ícone ao passar o mouse */
-    .navbar-toggler:hover {
-      box-shadow: 0 0 8px 4px rgba(91, 233, 233, 1);
-      /* Brilho ao redor da borda, não no interior */
-    }
-
-
-
-    .carousel-item img {
-      max-width: 1215px;
-      /* Ajusta à largura do contêiner */
-      max-height: 700px;
-      margin-right: 15px;
-      border-radius: 18px;
-      margin: 4px;
-      margin-top: 0px;
-
-    }
-
-    .carousel-item {
-      width: auto;
-    }
-
-    .profile-image {
-      position: relative;
-
-      background-color: rgba(241, 244, 247, 0.79);
-    }
-
-
-
-    .accordion-body {
-      background-color: rgb(230, 233, 236, 0.79);
-      /* Cor de fundo clara */
-      color: rgb(21, 24, 24);
-      /* Cor do texto */
-      border-radius: 12px;
-      /* Cantos arredondados */
-      padding: 15px;
-      /* Espaçamento interno */
-    }
-
-
-    .accordion-header button:hover {
-      background-color: rgb(57, 163, 163);
-      /* Tom mais escuro ao passar o mouse */
-      border-color: rgb(57, 163, 163);
-      color: white;
-      /* Texto branco ao hover */
-    }
-
-
-    p {
-      display: table-cell;
-      vertical-align: middle;
-    }
-
-    nav {
-
-      color: rgb(91, 233, 233);
-      background-color: rgb(22, 54, 54);
-      padding-top: 20px;
-      position: fixed;
-
-    }
-
-    button {
-      color: rgb(91, 233, 233);
-    }
-
-    dt {
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-
-    p {
-
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      font-size: 23px;
-    }
-
-    li {
-
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-    }
-
-    h1 {
-
-      padding: 10px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: white;
-      font-size: 32px;
-
-    }
-
-    h3 {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 20px;
-      padding-top: 4px;
-    }
-
-    h2 {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 20px;
-      padding-top: 2px;
-    }
-
-
-    footer {
-      height: auto;
-      padding: 18px 0;
-      background-color: rgb(22, 54, 54);
-      border-radius: 2px;
-      color: rgb(91, 233, 233);
-      margin-top: 15px;
-      font-size: 16px;
-      display: table;
-      width: 100%;
-      text-align: center;
-    }
-
-
-
-    /* Estilo para ícones */
-
-    .whatsapp-icon,
-    .linkedin-icon {
-      position: relative;
-      background-color: #1ec45a;
-      padding: 10px;
-      margin: 15px;
-      border-radius: 17px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      font-size: 15px;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s ease;
-      text-decoration: none;
-      max-width: 430px;
-    }
-
-    .whatsapp-icon:hover {
-      background-color: rgb(6, 124, 77);
-    }
-
-
-    .linkedin-icon {
-      background-color: #0077b5;
-      padding: 10px;
-
-    }
-
-    .linkedin-icon:hover {
-      background-color: rgb(59, 142, 142);
-      /* Tom de hover para o LinkedIn */
-    }
-
-
-    /* Estilo para o ícone do GitHub */
-
-    .github-icon {
-      background-color: #333;
-      padding: 10px;
-      margin: 15px;
-      border-radius: 17px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      font-size: 15px;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s ease;
-      text-decoration: none;
-      max-width: 430px;
-    }
-
-    .github-icon:hover {
-      background-color: #555;
-    }
-
-
-    /* Estilo para o ícone do e-mail */
-
-
-    .email-icon {
-      background-color: #d44638;
-      padding: 10px;
-      margin: 15px;
-      border-radius: 17px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      font-size: 15px;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s ease;
-      text-decoration: none;
-      max-width: 430px;
-    }
-
-    .email-icon:hover {
-      background-color: #b33a2e;
-    }
-
-    h2 {
-
-      font-size: 20px;
-
-    }
-
-    i {
-
-      padding-right: 2px;
-    }
-
-
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-size: 15px;
-      display: inline-block;
-      transition: transform 0.5s ease, box-shadow 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      transform: translateY(-6px);
-      box-shadow: 0px 7px 12px rgba(194, 24, 24, 0.2);
-    }
-
-    .navbar-collapse.show {
-      position: relative;
-      top: 0;
-
-      width: 100%;
-      background-color: rgb(22, 54, 54);
-      z-index: 1070;
-      /* Garante que fique acima do conteúdo */
-      padding: 10px;
-      /* Adiciona espaçamento */
-      overflow-y: auto;
-      /* Adiciona barra de rolagem, se necessário */
-      max-height: 100vh;
-    }
-
-    .navbar-toggler:focus,
-    .navbar-toggler:hover {
-      outline: none;
-      /* Remove a borda azul ao focar */
-    }
-
-    body.navbar-open {
-      overflow: hidden;
-      /* Impede que a página por trás role */
-    }
-
-
-    /*                     SKILLS           */
-
-    .skills-section {
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #788c91 0%, #6b7a80 100%);
-      text-align: center;
-    }
-
-    .skills-section .section-title {
-      font-size: 2rem;
-      margin-bottom: 40px;
-      color: #fff;
-      font-weight: 600;
-      animation: slideDown 0.6s ease-out;
-    }
-
-    @keyframes slideDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-    }
-
-    .skill-item {
-      flex: 1 1 calc(25% - 25px);
-      max-width: calc(25% - 25px);
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      padding: 25px;
-      text-align: center;
-      transition: all 0.3s ease;
-      animation: fadeInUp 0.6s ease-out backwards;
-      border-top: 4px solid #2c6e6e;
-    }
-
-    .skill-item:nth-child(1) { animation-delay: 0.1s; border-top-color: #3498db; }
-    .skill-item:nth-child(2) { animation-delay: 0.2s; border-top-color: #e74c3c; }
-    .skill-item:nth-child(3) { animation-delay: 0.3s; border-top-color: #f39c12; }
-    .skill-item:nth-child(4) { animation-delay: 0.4s; border-top-color: #9b59b6; }
-
-    .skill-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .skill-item i {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      transition: color 0.3s ease;
-    }
-
-    .skill-item:nth-child(1) i { color: #3498db; }
-    .skill-item:nth-child(2) i { color: #e74c3c; }
-    .skill-item:nth-child(3) i { color: #f39c12; }
-    .skill-item:nth-child(4) i { color: #9b59b6; }
-
-    .skill-item h3 {
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-      color: #165454;
-      font-weight: 600;
-    }
-
-    .skill-category {
-      margin-bottom: 12px;
-    }
-
-    .skill-name {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 4px;
-      text-align: left;
-      font-weight: 500;
-    }
-
-    .progress-bar-container {
-      background: #ecf0f1;
-      border-radius: 6px;
-      height: 6px;
-      overflow: hidden;
-      margin-bottom: 10px;
-    }
-
-    .progress-bar {
-      height: 100%;
-      border-radius: 6px;
-      animation: fillWidth 1s ease-out forwards;
-    }
-
-    @keyframes fillWidth {
-      from {
-        width: 0;
-      }
-      to {
-        width: var(--width, 80%);
-      }
-    }
-
-    .skill-item:nth-child(1) .progress-bar { background: #3498db; }
-    .skill-item:nth-child(2) .progress-bar { background: #e74c3c; }
-    .skill-item:nth-child(3) .progress-bar { background: #f39c12; }
-    .skill-item:nth-child(4) .progress-bar { background: #9b59b6; }
-
-    /* Responsividade para telas menores */
-
-    @media (max-width: 768px) {
-      .skill-item {
-        flex: 1 1 calc(50% - 20px);
-        max-width: calc(50% - 20px);
-      }
-    }
-
-
-    @media (max-width: 480px) {
-      .skill-item {
-        flex: 1 1 100%;
-        max-width: 100%;
-      }
-
-
-    }
-  </style>
+  <link href="style.css" rel="stylesheet">
 
 </head>
 
@@ -622,32 +30,32 @@ e
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"
-        style="color:rgb(91, 233, 233); font-family: Arial Black; font-size:20px; padding: 10px;"> Sê Bem-vindo á
+       > Sê Bem-vindo á
         página</a>
-      <button style="color:rgb(91, 233, 233);" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
 
-        <i class="fas fa-bars" style="color: rgb(91, 233, 233); font-size: 24px;"></i>
+        <i class="fas fa-bars"></i>
 
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#inicio" style="color:rgb(91, 233, 233);"> Início</a>
+            <a class="nav-link active" aria-current="page" href="#inicio"> Início</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#sobre" style="color:rgb(91, 233, 233);">Contacto</a>
+            <a class="nav-link" href="#sobre">Contacto</a>
           </li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#contacto" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false" style="color:rgb(91, 233, 233);"> Mais </a>
+              aria-expanded="false"> Mais </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#Habilities" style="color:rgb(60, 118, 118);">Habilidades </a>
-             <li><a class="dropdown-item" href="https://projpages.vercel.app" style="color:rgb(60, 118, 118);">Projectos</a></li>
+              <li><a class="dropdown-item" href="#Habilities">Habilidades </a>
+             <li><a class="dropdown-item" href="https://projpages.vercel.app">Projectos</a></li>
 
               </li>
               <li>
@@ -688,54 +96,6 @@ e
     <img src="imgs/PINats.jpeg" alt="Natsprofile1.jpg">
   </div>
 
-
-  <style>
-    .profile-image {
-      position: absolute;
-      top: calc(100px + 1.5rem);
-      /* Ajuste fino para posicionar perto da seção */
-      right: 100px;
-      width: 125px;
-      height: 130px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid rgb(91, 233, 233);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .profile-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-
-    @media screen and (max-width: 728px) {
-
-      .profile-image {
-        position: absolute;
-        top: calc(75px + 2rem);
-        /* Ajuste fino para posicionar perto da seção */
-        right: 15px;
-        width: 85px;
-        height: 85px;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 2px solid rgb(91, 233, 233);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      .profile-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .carousel-item img {
-        height: 250px;
-      }
-    }
-  </style>
 
 
 
@@ -801,15 +161,12 @@ e
                   <h3>Web Development</h3>
                   <div class="skill-category">
                     <div class="skill-name">HTML / CSS</div>
-                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 95%"></div></div>
                   </div>
                   <div class="skill-category">
                     <div class="skill-name">JavaScript</div>
-                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 85%"></div></div>
                   </div>
                   <div class="skill-category">
                     <div class="skill-name">React</div>
-                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 65%"></div></div>
                   </div>
                 </div>
 
@@ -818,15 +175,12 @@ e
                   <h3>Design & UX</h3>
                   <div class="skill-category">
                     <div class="skill-name">UI/UX Design</div>
-                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 90%"></div></div>
                   </div>
                   <div class="skill-category">
                     <div class="skill-name">Responsive Design</div>
-                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 90%"></div></div>
                   </div>
                   <div class="skill-category">
                     <div class="skill-name">Performance (LCP, CLS)</div>
-                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 85%"></div></div>
                   </div>
                 </div>
 
@@ -835,15 +189,12 @@ e
                   <h3>Backend & BD</h3>
                   <div class="skill-category">
                     <div class="skill-name">Node.js</div>
-                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 75%"></div></div>
                   </div>
                   <div class="skill-category">
                     <div class="skill-name">MongoDB</div>
-                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 65%"></div></div>
                   </div>
                   <div class="skill-category">
                     <div class="skill-name">Git & GitHub</div>
-                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 95%"></div></div>
                   </div>
                 </div>
 
@@ -852,15 +203,12 @@ e
                   <h3>Outras Skills</h3>
                   <div class="skill-category">
                     <div class="skill-name">Agile Methodology</div>
-                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 75%"></div></div>
                   </div>
                   <div class="skill-category">
                     <div class="skill-name">C# / C++</div>
-                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 70%"></div></div>
                   </div>
                   <div class="skill-category">
                     <div class="skill-name">Vite & NPM</div>
-                    <div class="progress-bar-container"><div class="progress-bar" style="--width: 85%"></div></div>
                   </div>
                 </div>
               </div>
@@ -869,7 +217,7 @@ e
 
 
           <footer id="sobre">
-            <li style="font-size: 20px;"> Contacte-me: </li>
+            <li> Contacte-me: </li>
             <hr>
             <dl>
               <ul>
@@ -895,13 +243,13 @@ e
             </ul>
 
             <ul>
-              <a href="https://wa.me/951518338" target="_blank" class="whatsapp-icon">
+              <a href="https://wa.me/244951518338" target="_blank" class="whatsapp-icon">
                 <i class="fab fa-whatsapp"></i> WhatsApp
               </a>
             </ul>
 
 
-            <p style="text-align: justify; vertical-align: middle;">» Nats Site «</p>
+            <p>» Nats Site «</p>
           </footer>
 
 
