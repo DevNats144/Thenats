@@ -670,9 +670,36 @@ html {
   transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
 
-.navbar .navbar-nav .nav-link:hover {
+.navbar .navbar-nav .nav-link:not(.language-toggle):hover {
   transform: translateY(-5px);
   box-shadow: 0 7px 12px rgba(194, 24, 24, 0.2);
+}
+
+.navbar .language-toggle {
+  min-width: 48px;
+  margin-left: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(91, 233, 233, 0.6);
+  border-radius: 999px;
+  background: transparent;
+  color: rgb(91, 233, 233);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.navbar .language-toggle:hover,
+.navbar .language-toggle:focus-visible {
+  border-color: rgb(91, 233, 233);
+  background: rgba(91, 233, 233, 0.12);
+  color: rgb(91, 233, 233);
+}
+
+.accordion-body p {
+  display: block;
+  margin: 0 0 1rem;
 }
 
 .navbar-toggler,
