@@ -11,6 +11,7 @@ Você pode acessar a página diretamente por aqui:
 
 - ✅ Layout responsivo com Bootstrap 5 e Css3
 - ✅ Sessão de habilidades com animações suaves
+- ✅ Animações ScrollReveal ao rolar a página, respeitando a preferência por movimento reduzido
 - ✅ Barra de navegação com menu colapsável para mobile
 - ✅ Área de projetos com links externos
 
