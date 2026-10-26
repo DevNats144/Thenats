@@ -529,8 +529,10 @@ html {
       font-size: 1.15rem;
     }
 
-    .skill-icon i {
-      padding: 0;
+    .skill-icon svg {
+      display: block;
+      width: 23px;
+      height: 23px;
     }
 
     .skill-index {
@@ -656,6 +658,11 @@ html {
   font-family: "Arial Black", sans-serif;
   font-size: 20px;
   padding: 10px;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+  color: rgb(91, 233, 233);
 }
 
 .navbar-toggler,
