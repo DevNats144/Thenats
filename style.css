@@ -44,7 +44,7 @@ html {
       }
 
       .navbar-nav .nav-link {
-        font-size: 14px;
+        font-size: 15px;
         /* Reduz o tamanho dos links */
         padding: 14px 0;
         /* Espaçamento entre os links */
@@ -66,7 +66,6 @@ html {
 
       nav ul li a:hover {
         transform: translateY(-7px);
-        transition: all 0.4s ease;
       }
 
 
@@ -407,13 +406,13 @@ html {
     nav ul li a {
       text-decoration: none;
       color: #333;
-      font-size: 15px;
+      font-size: 18px;
       display: inline-block;
-      transition: transform 0.5s ease, box-shadow 0.3s ease;
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
     }
 
     nav ul li a:hover {
-      transform: translateY(-6px);
+      transform: translateY(-5px);
       box-shadow: 0px 7px 12px rgba(194, 24, 24, 0.2);
     }
 
@@ -663,6 +662,17 @@ html {
 .navbar .navbar-brand:hover,
 .navbar .navbar-brand:focus {
   color: rgb(91, 233, 233);
+}
+
+.navbar .navbar-nav .nav-link {
+  font-size: clamp(15px, 1.25vw, 18px);
+  font-weight: 600;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 7px 12px rgba(194, 24, 24, 0.2);
 }
 
 .navbar-toggler,
