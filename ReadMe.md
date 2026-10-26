@@ -2,34 +2,34 @@
 
 Este é um site pessoal criado por mim, **Dev Nats**, com o objetivo de apresentar minhas habilidades, projetos e informações de contato de forma moderna, responsiva e estilizada com **Bootstrap 5**.
 
-## 🔗 Acesso ao site
+##  Acesso ao site
 
 Você pode acessar a página diretamente por aqui:  
-➡️ [https://natsproject.vercel.app]
+ [https://natsproject.vercel.app]
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
 - ✅ Layout responsivo com Bootstrap 5 e Css3
 - ✅ Sessão de habilidades com animações suaves
 - ✅ Barra de navegação com menu colapsável para mobile
-- ✅ Área de projetos com link externo
+- ✅ Área de projetos com links externos
 
-## 📂 Estrutura do projeto
+##  Estrutura do projeto
 
-## 💡 Tecnologias usadas
+##  Tecnologias usadas
 
 - HTML5
 - CSS3 (com Media Queries)
 - Bootstrap 5
 - Font Awesome
 
-## 📱 Mobile First
+##  Mobile First
 
 A estrutura foi pensada com foco em dispositivos móveis, com ajustes específicos para telas menores (até 600px), garantindo uma navegação fluida em qualquer dispositivo móvel.
 
-## 📫 Contato
+##  Contato
 
-Sinta-se à vontade para me contatar por qualquer uma das plataformas abaixo:
+Sinta-se à vontade para me contactar por qualquer uma das plataformas abaixo:
 
 - [LinkedIn](https://linkedin.com/in/seuperfil)
 - [GitHub](https://github.com/seuusuario)
